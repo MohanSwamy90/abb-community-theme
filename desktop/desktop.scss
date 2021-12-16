@@ -1,0 +1,181 @@
+body {
+    font-family: ABBvoice;
+}
+
+.sign-up-button {
+    background-color: #ff000f;
+    border-radius: 30px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Abbvoice-medium, sans-serif;
+    position: relative;
+    left: 18%;
+    font-size: 1.1rem
+}
+
+.login-button svg {
+    display: none;
+}
+
+.login-button {
+    color: black;
+    background: white;
+    font-size: 1.1rem
+}
+
+.d-header .header-buttons {
+    position: relative;
+    right: 10%;
+}
+
+.d-header .title {
+    position: relative;
+    right: 5px;
+}
+
+.custom-header-links {
+    font-family: ABBVoice-medium, sans-serif !important;
+    font-weight: 500;
+}
+
+.custom-header-links .headerLink a {
+    color: #242424;
+}
+
+ol.category-breadcrumb {
+    display: none !important;
+}
+
+.header-content {
+    z-index: 999;
+    width: 100%;
+    background: #fff;
+    top: 4rem;
+}
+
+.digital-content {
+    position: relative;
+}
+
+.header-content .nav-content {
+    zoom: 1;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    height: 40px;
+}
+
+.header-content .nav-content:after {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+    content: '.';
+}
+
+.title-icon {
+    padding-right: 10px;
+    padding-left: 13px;
+    font-size: 1.2em;
+    height: 40px;
+    width: 50px;
+}
+
+.digital-talks-header {
+    color: #2a2a2a !important;
+    font-family: ABBvoice-Medium;
+    font-size: 15px;
+    font-weight: 550;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.digital-talks-header:hover {
+    color: #5d5d5d;
+}
+
+.browse-text-header {
+    max-width: 215px;
+    font-family: ABBvoice, Helvetica, Arial, sans-serif !important;
+    font-size: 14px;
+    padding-left: 15px;
+    cursor: pointer;
+    color: #777;
+}
+
+.browse-text-header a {
+    color: #5d5d5d;
+}
+
+.active {
+    border-bottom: 2px solid #0c74da;
+    font-family: Abbvoice-bold, sans-serif !important;
+    color: #464646;
+    padding: 0px 5px 5px 5px;
+}
+
+.vertical-line {
+    border-left: thin solid #3c3c3c;
+    height: 30px;
+    margin-top: 4px;
+    left: 20%;
+    margin-right: 5px;
+    top: 0;
+}
+
+.sec-nav-vline {
+    margin-left: 20px;
+    opacity: 0.2;
+    border-left-color: black;
+    height: 23.7px;
+}
+
+.navigation-container {
+    margin-top: -32px;
+}
+
+.alert.alert-info {
+    display: none;
+}
+
+.search-dropdown {
+    display: none;
+}
+
+.menu-links.columned li a.about-link {
+    display: none;
+}
+
+.menu-links.columned li a.mobile-toggle-link {
+    display: none;
+}
+
+.menu-links.columned li a.custom-hamburger-link {
+    display: none;
+}
+
+@media only screen and (max-width: 950px) {
+    .menu-links.columned li a.custom-hamburger-link {
+        display: block;
+    }
+    .custom-header-links {
+        display: none;
+    }
+    .d-header .title {
+        position: unset;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .sign-up-button {
+        position: relative;
+        left: 65%;
+    }
+    .login-button {
+        position: relative;
+        right: 35%;
+    }
+}
