@@ -1,4 +1,4 @@
-<script type="text/x-handlebars" data-template-name="list/topic-list-item.hbr">
+<script type="text/x-handlebars" data-template-name="list/topic-list-item">
 <div class="sidebar">
   <div class="card">card 1</div>
   <div class="card">card 2</div>
