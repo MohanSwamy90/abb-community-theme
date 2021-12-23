@@ -39,12 +39,11 @@
         {{~/if}}
       </div>
 
-      {{~raw-plugin-outlet name="topic-list-after-title"}}
-      {{#if topic.hasExcerpt}}
+      {{~raw-plugin-outlet name="topic-list-after-title"}}      
       <div class="topic-excerpt">
         {{raw "list/topic-excerpt" topic=topic}}
       </div>
-      {{/if}}
+      
       {{#if topic.image_url}}
       <div class="topic-image">
         <img src="{{topic.image_url}}" />
