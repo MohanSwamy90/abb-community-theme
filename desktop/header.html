@@ -32,62 +32,65 @@
   This causes the topic-post-badge to be considered the same word as "text"
   at the end of the link, preventing it from line wrapping onto its own line.
 --}}
-<td class='main-link clearfix' colspan="{{titleColSpan}}">
+<div class='main-link clearfix' colspan="1">
   <span class='link-top-line'>
-    {{~raw-plugin-outlet name="topic-list-before-status"}}
-    {{~raw "topic-status" topic=topic}}
-    {{~topic-link topic class="raw-link raw-topic-link"}}
-    {{~#if topic.featured_link}}
-      {{~topic-featured-link topic}}
-    {{~/if}}
-    {{~raw-plugin-outlet name="topic-list-after-title"}}
-    {{~#if showTopicPostBadges}}
-      {{~raw "topic-post-badges" unread=topic.unread newPosts=topic.displayNewPosts unseen=topic.unseen url=topic.lastUnreadUrl newDotText=newDotText}}
-    {{~/if}}
+    <div class="byline">
+      <div class="author">
+        {{~raw-plugin-outlet name="topic-list-before-status"}}
+        <a href="{{topic.posters.[0].user.userPath}}" data-user-card="{{topic.posters.[0].user.username}}">
+          {{avatar topic.posters.[0].user imageSize='medium'}}
+          <div class="name-and-date">
+            <span class="username">{{topic.posters.[0].user.username}}</span>
+            {{format-date topic.createdAt format="tiny"}}
+          </div>
+        </a>
+
+      </div>
+      {{#unless hideCategory}}
+      {{#unless topic.isPinnedUncategorized}}
+      {{category-link topic.category}}
+      {{/unless}}
+      {{/unless}}
+
+    </div>
+    <div class="link-middle-line" id='{{#if topic.hasExcerpt}}link-middle-line-excerpt{{/if}}' >
+      <div class="topic-title">
+        {{~raw "topic-status" topic=topic}}
+        {{~topic-link topic class="raw-link raw-topic-link"}}
+        {{~#if topic.featured_link}}
+        {{~topic-featured-link topic}}
+        {{~/if}}
+        {{~#if showTopicPostBadges}}
+        {{~raw "topic-post-badges" unread=topic.unread newPosts=topic.displayNewPosts unseen=topic.unseen url=topic.lastUnreadUrl newDotText=newDotText}}
+        {{~/if}}
+      </div>
+
+      {{~raw-plugin-outlet name="topic-list-after-title"}}
+      {{#if topic.hasExcerpt}}
+      <div class="topic-excerpt">
+        {{raw "list/topic-excerpt" topic=topic}}
+      </div>
+      {{/if}}
+      {{#if topic.image_url}}
+      <div class="topic-image">
+        <img src="{{topic.image_url}}" />
+      </div>
+      {{/if}}
+      {{discourse-tags topic mode="list" tagsForUser=tagsForUser}}
+
+
+    </div>
   </span>
+  <div class="link-bottom-line">
+    {{raw "list/action-list" topic=topic postNumbers=topic.liked_post_numbers className="likes" icon="heart"}}
 
-  {{discourse-tags topic mode="list" tagsForUser=tagsForUser}}
-  {{#if expandPinned}}
-    {{raw "list/topic-excerpt" topic=topic}}
-  {{/if}}
-  {{raw "list/action-list" topic=topic postNumbers=topic.liked_post_numbers className="likes" icon="heart"}}
-</td>
-
-{{#unless hideCategory}}
-  {{#unless topic.isPinnedUncategorized}}
-    {{raw "list/category-column" category=topic.category}}
-  {{/unless}}
-{{/unless}}
-
-{{#if showPosters}}
-  {{raw "list/posters-column" posters=topic.posters}}
-{{/if}}
-
-{{raw "list/posts-count-column" topic=topic}}
-
-{{#if showParticipants}}
-  {{raw "list/posters-column" posters=topic.participants}}
-{{/if}}
-
-{{#if showLikes}}
-<td class="num likes">
-  {{#if hasLikes}}
-    <a href='{{topic.summaryUrl}}'>
-      {{number topic.like_count}} {{d-icon "heart"}}</td>
+    {{#if hasLikes}}
+    <a class="likes" href='{{topic.summaryUrl}}'>
+      {{number topic.like_count}} {{d-icon "heart"}}
     </a>
-  {{/if}}
-{{/if}}
+    {{/if}}
+    {{raw "list/posts-count-column" topic=topic}}
+  </div>
+</div>
 
-{{#if showOpLikes}}
-<td class="num likes">
-  {{#if hasOpLikes}}
-    <a href='{{topic.summaryUrl}}'>
-      {{number topic.op_like_count}} {{d-icon "heart"}}</td>
-    </a>
-  {{/if}}
-{{/if}}
-
-<td class="num views {{topic.viewsHeat}}">{{number topic.views numberKey="views_long"}}</td>
-
-{{raw "list/activity-column" topic=topic class="num" tagName="td"}}
 </script>
