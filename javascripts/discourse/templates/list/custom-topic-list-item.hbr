@@ -19,7 +19,10 @@
         {{~raw "topic-post-badges" unread=topic.unread newPosts=topic.displayNewPosts unseen=topic.unseen url=topic.lastUnreadUrl newDotText=newDotText}}
         {{~/if}}
 		
-		{{~raw-plugin-outlet name="topic-list-after-title"}}
+	{{~raw-plugin-outlet name="topic-list-after-title"}}
+	<div class="name-and-date">            
+            {{format-date topic.createdAt}}
+         </div>
       {{#if topic.hasExcerpt}}
       <div class="topic-excerpt">
         {{raw "list/topic-excerpt" topic=topic}}
@@ -45,9 +48,7 @@
         {{~raw-plugin-outlet name="topic-list-before-status"}}
         <a href="{{topic.posters.[0].user.userPath}}" data-user-card="{{topic.posters.[0].user.username}}">
           {{avatar topic.posters.[0].user imageSize='medium'}}
-          <div class="name-and-date">            
-            {{format-date topic.createdAt format="tiny"}}
-          </div>
+          
         </a>
 
       </div>
