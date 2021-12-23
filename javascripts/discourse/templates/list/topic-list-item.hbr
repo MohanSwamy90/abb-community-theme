@@ -1,4 +1,4 @@
-{{~raw-plugin-outlet name="topic-list-before-columns"}}
+<script type="text/x-handlebars" data-template-name="list/topic-list-item.hbr">
 
 {{#if bulkSelectEnabled}}
   <td class="bulk-select topic-list-data">
@@ -79,3 +79,4 @@
 </td>
 
 {{raw "list/activity-column" topic=topic class="num topic-list-data" tagName="td"}}
+</script>
