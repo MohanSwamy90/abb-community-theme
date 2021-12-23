@@ -9,25 +9,6 @@
 <div class='main-link clearfix' colspan="1">
   <span class='link-top-line'>
     <div class="byline">
-      <div class="author">
-        {{~raw-plugin-outlet name="topic-list-before-status"}}
-        <a href="{{topic.posters.[0].user.userPath}}" data-user-card="{{topic.posters.[0].user.username}}">
-          {{avatar topic.posters.[0].user imageSize='medium'}}
-          <div class="name-and-date">
-            <span class="username">{{topic.posters.[0].user.username}}</span>
-            {{format-date topic.createdAt format="tiny"}}
-          </div>
-        </a>
-
-      </div>
-      {{#unless hideCategory}}
-      {{#unless topic.isPinnedUncategorized}}
-      {{category-link topic.category}}
-      {{/unless}}
-      {{/unless}}
-
-    </div>
-    <div class="link-middle-line" id='{{#if topic.hasExcerpt}}link-middle-line-excerpt{{/if}}' >
       <div class="topic-title">
         {{~raw "topic-status" topic=topic}}
         {{~topic-link topic class="raw-link raw-topic-link"}}
@@ -42,17 +23,27 @@
       {{~raw-plugin-outlet name="topic-list-after-title"}}      
       <div class="topic-excerpt">
         {{raw "list/topic-excerpt" topic=topic}}
-      </div>
-      
-      {{#if topic.image_url}}
-      <div class="topic-image">
-        <img src="{{topic.image_url}}" />
-      </div>
-      {{/if}}
-      {{discourse-tags topic mode="list" tagsForUser=tagsForUser}}
-
+      </div>          
+    </div>
+      {{#unless hideCategory}}
+      {{#unless topic.isPinnedUncategorized}}
+      {{category-link topic.category}}
+      {{/unless}}
+      {{/unless}}
 
     </div>
+    <div class="link-middle-line" >
+     <div class="author">
+        {{~raw-plugin-outlet name="topic-list-before-status"}}
+        <a href="{{topic.posters.[0].user.userPath}}" data-user-card="{{topic.posters.[0].user.username}}">
+          {{avatar topic.posters.[0].user imageSize='medium'}}
+          <div class="name-and-date">
+            <span class="username">{{topic.posters.[0].user.username}}</span>
+            {{format-date topic.createdAt format="tiny"}}
+          </div>
+        </a>
+      </div>
+     
   </span>
   <div class="link-bottom-line">
     {{raw "list/action-list" topic=topic postNumbers=topic.liked_post_numbers className="likes" icon="heart"}}
