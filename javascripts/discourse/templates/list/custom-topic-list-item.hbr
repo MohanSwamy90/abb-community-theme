@@ -32,7 +32,7 @@
         <img src="{{topic.image_url}}" />
       </div>
       {{/if}}
-      
+      {{discourse-tags topic mode="list" tagsForUser=tagsForUser}}
 	</div>
      
     </div>    
@@ -43,14 +43,19 @@
         <a href="{{topic.posters.[0].user.userPath}}" data-user-card="{{topic.posters.[0].user.username}}">
           {{avatar topic.posters.[0].user imageSize='medium'}}
           <div class="name-and-date">            
-            {{format-date topic.createdAt format="tiny" noTitle="true"~ }}
+            {{format-date topic.createdAt format="tiny"}}
           </div>
         </a>
-      </div>    
-  </div>
-  
-  <div>
-  {{raw "list/action-list" topic=topic postNumbers=topic.liked_post_numbers className="likes" icon="heart"}}
+
+      </div>
+      {{#unless hideCategory}}
+      {{#unless topic.isPinnedUncategorized}}
+      {{category-link topic.category}}
+      {{/unless}}
+      {{/unless}}
+
+    {{raw "list/action-list" topic=topic postNumbers=topic.liked_post_numbers className="likes" icon="heart"}}
+
     {{#if hasLikes}}
     <a class="likes" href='{{topic.summaryUrl}}'>
       {{number topic.like_count}} {{d-icon "heart"}}
