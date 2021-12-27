@@ -45,7 +45,7 @@
         </a>
       </span>   
       <span>
-       {{d-icon "far-eye"}}
+       {{d-icon "fal fa-angle-right"}}
       </span>
   </div>
   <div class="link-bottom-line">
