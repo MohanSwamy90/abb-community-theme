@@ -45,7 +45,7 @@
         </a>
       </span>   
       <span>
-       {{d-icon "far fa-address-book"}}
+       {{d-icon "far-right-arrow"}}
       </span>
   </div>
   <div class="link-bottom-line">
