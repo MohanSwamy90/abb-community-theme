@@ -45,7 +45,7 @@
         </a>
       </span>   
       <span>
-       {{d-icon "far-right-arrow"}}
+       <i class="fal fa-angle-right"></i>
       </span>
   </div>
   <div class="link-bottom-line">
