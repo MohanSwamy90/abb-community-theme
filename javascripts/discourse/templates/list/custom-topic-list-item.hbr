@@ -46,15 +46,10 @@
             {{format-date topic.createdAt format="tiny"}}
           </div>
         </a>
-
-      </div>
-      {{#unless hideCategory}}
-      {{#unless topic.isPinnedUncategorized}}
-      {{category-link topic.category}}
-      {{/unless}}
-      {{/unless}}
-
-    {{raw "list/action-list" topic=topic postNumbers=topic.liked_post_numbers className="likes" icon="heart"}}
+      </div>         
+  </div>
+  <div>
+  {{raw "list/action-list" topic=topic postNumbers=topic.liked_post_numbers className="likes" icon="heart"}}
 
     {{#if hasLikes}}
     <a class="likes" href='{{topic.summaryUrl}}'>
