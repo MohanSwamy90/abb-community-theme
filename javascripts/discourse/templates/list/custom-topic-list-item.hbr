@@ -45,7 +45,7 @@
         </a>
       </span>   
       <span>
-       {{d-icon "fal fa-angle-right"}}
+       {{d-icon "far fa-address-book"}}
       </span>
   </div>
   <div class="link-bottom-line">
