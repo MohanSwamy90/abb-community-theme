@@ -35,15 +35,15 @@
   </span>
   <div >  
       {{~raw-plugin-outlet name="topic-list-after-title"}}      
-      <div class="topic-excerpt">
+      <div class="topic-excerpt" style="width:80%;display:inline-block">
         {{raw "list/topic-excerpt" topic=topic}}
       </div>      
-   <div class="author">
+   <span class="author">
         {{~raw-plugin-outlet name="topic-list-before-status"}}
         <a href="{{topic.posters.[0].user.userPath}}" data-user-card="{{topic.posters.[0].user.username}}">
           {{avatar topic.posters.[0].user imageSize='medium'}}          
         </a>
-      </div>         
+      </span>         
   </div>
   <div class="link-bottom-line">
   {{raw "list/action-list" topic=topic postNumbers=topic.liked_post_numbers className="likes" icon="heart"}}
