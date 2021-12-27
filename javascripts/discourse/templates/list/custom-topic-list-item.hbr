@@ -31,8 +31,7 @@
       <div class="topic-image">
         <img src="{{topic.image_url}}" />
       </div>
-      {{/if}}
-      {{discourse-tags topic mode="list" tagsForUser=tagsForUser}}
+      {{/if}}      
 	</div>
      
     </div>    
