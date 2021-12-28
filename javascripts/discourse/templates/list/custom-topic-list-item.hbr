@@ -1,16 +1,5 @@
-{{!-- this custom template is shared by mobile and desktop and is called for in common/header.html --}}
-
-{{#if bulkSelectEnabled}}
-<td class="bulk-select">
-  <input type="checkbox" class="bulk-select">
-</td>
-{{/if}}
-
-<div class='main-link clearfix' colspan="1">
-  <span class='link-top-line'>
-    <div class="byline">
-	<div>
-	 <div class="topic-title">
+<div class="link-middle-line" id='{{#if topic.hasExcerpt}}link-middle-line-excerpt{{/if}}' >
+      <div class="topic-title">
         {{~raw "topic-status" topic=topic}}
         {{~topic-link topic class="raw-link raw-topic-link"}}
         {{~#if topic.featured_link}}
@@ -19,43 +8,32 @@
         {{~#if showTopicPostBadges}}
         {{~raw "topic-post-badges" unread=topic.unread newPosts=topic.displayNewPosts unseen=topic.unseen url=topic.lastUnreadUrl newDotText=newDotText}}
         {{~/if}}
-	<div class="name-and-date">            
-            {{format-date topic.createdAt format="tiny"}}
-          </div>
       </div>
-
-      {{#if topic.image_url}}
-      <div class="topic-image">
-        <img src="{{topic.image_url}}" />
+       <div class="name-and-date">
+         {{format-date topic.createdAt }}
       </div>
-      {{/if}}      
-	</div>
-     
-    </div>    
-  </span>
-  <div >  
-      {{~raw-plugin-outlet name="topic-list-after-title"}}      
-      <div class="topic-excerpt" style="width:80%;display:inline-block">
-        {{raw "list/topic-excerpt" topic=topic}}
-      </div>      
-   <span class="author">
-        {{~raw-plugin-outlet name="topic-list-before-status"}}
-        <a href="{{topic.posters.[0].user.userPath}}" data-user-card="{{topic.posters.[0].user.username}}">
-          {{avatar topic.posters.[0].user imageSize='medium'}}          
-        </a>
-      </span>   
-      <span>
-       <i class="fal fa-angle-right"></i>
-      </span>
-  </div>
-  <div class="link-bottom-line">
-  {{raw "list/action-list" topic=topic postNumbers=topic.liked_post_numbers className="likes" icon="heart"}}
+      {{~raw-plugin-outlet name="topic-list-after-title"}} 
+      <div>
+        <div class="topic-excerpt">
+            {{raw "list/topic-excerpt" topic=topic}}
+        </div>      
+      {{#each topic.posters as |poster|}}
+  {{#if poster.moreCount}}
+    <a class="posters-more-count">{{poster.moreCount}}</a>
+  {{else}}
+    <a href="{{poster.user.path}}" data-user-card="{{poster.user.username}}" class="{{poster.extraClasses}}">{{avatar poster avatarTemplatePath="user.avatar_template" usernamePath="user.username" namePath="user.name" imageSize="small"}}</a>
+  {{/if}}
+{{/each}}
+        <div>
+          {{topic.posters.length}}
+        </div>
+      <div>     
+       <div class="count">
+        <div>
+          <span>{{topic.like_count }} likes <span> | <span> {{topic.reply_count}} comments </span>
+        </div>
+        <div>
 
-    {{#if hasLikes}}
-    <a class="likes" href='{{topic.summaryUrl}}'>
-      {{number topic.like_count}} {{d-icon "heart"}}
-    </a>
-    {{/if}}
-    {{raw "list/posts-count-column" topic=topic}}
-  </div>
+        </div>
+      </div>     
 </div>
