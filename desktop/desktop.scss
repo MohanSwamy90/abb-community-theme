@@ -254,7 +254,7 @@ ol.category-breadcrumb {
 
 .topic-list .topic-excerpt{
 display:inline-block !important;
-width:90% !important;
+width:75% !important;
 }
 
 .topic-list a.title{
@@ -269,4 +269,15 @@ width:90% !important;
     font-family: ABBvoice-Medium;
     font-size: 13px;
     line-height: 15px;
+}
+
+.topic-list-item, tr :hover{
+    background-color: rgb(244 244 244);
+}
+
+.posters-length{
+    color: rgb(150 150 150);
+    font-size: 13px;
+    display: inline-block;
+    font-family: 'ABBvoice-medium';
 }
