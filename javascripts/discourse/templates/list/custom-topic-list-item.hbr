@@ -12,7 +12,8 @@
        <div class="name-and-date">
          {{format-date topic.createdAt }}
       </div>
-      {{~raw-plugin-outlet name="topic-list-after-title"}}       
+      {{~raw-plugin-outlet name="topic-list-after-title"}} 
+      <div>      
         <div class="topic-excerpt">
             {{raw "list/topic-excerpt" topic=topic}}
              {{topic.excerpt}}
@@ -24,6 +25,7 @@
     <a href="{{poster.user.path}}" data-user-card="{{poster.user.username}}" class="{{poster.extraClasses}}">{{avatar poster avatarTemplatePath="user.avatar_template" usernamePath="user.username" namePath="user.name" imageSize="small"}}</a>
   {{/if}}
 {{/each}}
+</div>
         <div>
           {{topic.posters.length}}
         </div>
