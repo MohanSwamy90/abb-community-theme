@@ -12,8 +12,7 @@
        <div class="name-and-date">
          {{format-date topic.createdAt }}
       </div>
-      {{~raw-plugin-outlet name="topic-list-after-title"}} 
-      <div>
+      {{~raw-plugin-outlet name="topic-list-after-title"}}       
         <div class="topic-excerpt">
             {{raw "list/topic-excerpt" topic=topic}}
              {{topic.excerpt}}
@@ -32,9 +31,7 @@
        <div class="count">
         <div>
           <span>{{topic.like_count }} likes <span> | <span> {{topic.reply_count}} comments </span>
-        </div>
-        <div>
-
-        </div>
+        </div>       
       </div>     
+</div>
 </div>
