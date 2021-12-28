@@ -16,7 +16,7 @@
       <div>
         <div class="topic-excerpt">
             {{raw "list/topic-excerpt" topic=topic}}
-             {{topic.exercept}}
+             {{topic.excerpt}}
         </div>      
       {{#each topic.posters as |poster|}}
   {{#if poster.moreCount}}
