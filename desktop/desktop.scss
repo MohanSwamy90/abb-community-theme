@@ -284,3 +284,15 @@ width:75% !important;
 .topic-list-body{
     border-top:none;
 }
+
+#reply-control .grippie {
+  display: none;
+}
+
+#reply-control.open.composer-action-createTopic {
+    position: absolute;    
+    bottom: auto;
+    top: 140px;
+    z-index: 1000;
+    width: 31%;
+}
