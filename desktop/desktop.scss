@@ -294,5 +294,19 @@ width:75% !important;
     bottom: auto;
     top: 140px;
     z-index: 1000;
-    width: 31%;
+    width: 35%;
+}
+
+#reply-control .single-select.dropdown-select-box, #reply-control .composer-controls  {
+  display: none;
+} 
+
+#reply-control .reply-area.with-tags{
+    padding: 25px 0px 25px 35px
+}
+
+#reply-control .title-and-category with-preview .title-input,
+#reply-control .title-and-category with-preview .category-input,
+#reply-control .d-editor-textarea-wrapper{
+padding-bottom: 10px;
 }
