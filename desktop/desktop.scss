@@ -294,19 +294,26 @@ width:75% !important;
     bottom: auto;
     top: 140px;
     z-index: 1000;
-    width: 35%;
+    width: 32%;
 }
 
-#reply-control .single-select.dropdown-select-box, #reply-control .composer-controls  {
+#reply-control .single-select.dropdown-select-box, #reply-control .reply-to .composer-controls  {
   display: none;
 } 
 
 #reply-control .reply-area.with-tags{
-    padding: 25px 0px 25px 35px
+    padding: 25px 0px 25px 32px
 }
 
-#reply-control .title-and-category with-preview .title-input,
-#reply-control .title-and-category with-preview .category-input,
-#reply-control .d-editor-textarea-wrapper{
-padding-bottom: 10px;
+#reply-control .with-tags .title-input,#reply-control .with-tags .category-input {   
+    padding-bottom: 10px;
 }
+
+.#reply-control .reply-to .composer-action-title .action-title{
+ padding-bottom: 15px;
+}
+
+.#reply-control .reply-area .submit-panel {
+   padding-top: 10px;
+}
+
