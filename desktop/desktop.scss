@@ -356,6 +356,7 @@ display:none;
     display: inline-block;
     vertical-align: middle;
     margin-right: 0.5rem;
+    padding-bottom: 25px;
 }
 
 .abb-hr{
@@ -382,4 +383,7 @@ display:none;
     font-family: ABBvoice-light;
     font-size: 22px;
     line-height: 26px;
+}
+.main-outlet{
+    padding-top:0px !important;
 }
