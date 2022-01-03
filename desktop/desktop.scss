@@ -320,3 +320,7 @@ width:75% !important;
 #reply-control .reply-area .submit-panel {
    padding-top: 10px;
 }
+
+.navigation-container .navigation-bar, ol.category-breadcrumb > li :nth-child(2){
+display:none;
+}
