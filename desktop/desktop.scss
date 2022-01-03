@@ -339,7 +339,7 @@ width:75% !important;
 }
 
 .category-breadcrumb>li:nth-child(4){
-    width:78%
+    width:84%
 }
 
 .category-breadcrumb .category-drop{
@@ -347,4 +347,7 @@ width:75% !important;
 }
 .navigation-controls{
 display:none;
+}
+.list-controls .combo-box .combo-box-header{
+    border: 1px solid #707070;
 }
