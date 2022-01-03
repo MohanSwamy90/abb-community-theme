@@ -324,3 +324,15 @@ width:75% !important;
 .category-breadcrumb>li:nth-child(2){
     display:none;
 }
+
+.category-breadcrumb{
+    width:100%;
+}
+
+.category-breadcrumb>li:nth-child(1){
+    width:18%
+}
+
+.category-breadcrumb>li:nth-child(4){
+    width:78%
+}
