@@ -321,6 +321,10 @@ width:75% !important;
    padding-top: 10px;
 }
 
-.navigation-container .navigation-bar, ol.category-breadcrumb > li :nth-child(2){
-display:none;
+.navigation-container #navigation-bar{
+    display:none;
+}
+
+ol.category-breadcrumb:nth-child(2){
+    display:none;
 }
