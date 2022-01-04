@@ -28,6 +28,9 @@
 <div class="posters-length">
   +{{topic.posters.length}}
 </div>
+<div>
+<i class="far fa-chevron-right"></i>
+</div>
 </div>
         
       <div>     
