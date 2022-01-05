@@ -1,5 +1,7 @@
 <script type="text/discourse-plugin" version="0.8">  
-  document.querySelectorAll('.d-header .title')[0].prepend('Community')
+  $(document).ready(function() {
+    $('.d-header .title').prepend("<a class='community-landing' href='/'>Community</a><span class='vertical-line sec-nav-vline ie-brand-vline'></span>");
+    });
   const { findRawTemplate } = require("discourse-common/lib/raw-templates");
   api.modifyClass('component:topic-list-item', {
     renderTopicListItem() {
