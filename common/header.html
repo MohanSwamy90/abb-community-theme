@@ -1,6 +1,7 @@
 <script type="text/discourse-plugin" version="0.8">
+$('.d-header .title').prepend("<a class='community-landing' href='/'>Community</a><span class='vertical-line sec-nav-vline ie-brand-vline'></span>");
+  
   const { findRawTemplate } = require("discourse-common/lib/raw-templates");
-
   api.modifyClass('component:topic-list-item', {
     renderTopicListItem() {
       const template = findRawTemplate("list/custom-topic-list-item");
@@ -9,5 +10,5 @@
       }
     },
   });  
-  $('.d-header .title').prepend("<a class='community-landing' href='/'>Community</a><span class='vertical-line sec-nav-vline ie-brand-vline'></span>");
+  
 </script>
