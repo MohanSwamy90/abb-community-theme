@@ -285,7 +285,11 @@ width:75% !important;
     bottom: auto;
     top: 140px;
     z-index: 1010;
-    width: 32%;
+    width: fit-content;
+}
+
+#reply-control .wmd-controls{
+   width: min-content;
 }
 
 #reply-control .single-select.dropdown-select-box, #reply-control .reply-to .composer-controls  {
