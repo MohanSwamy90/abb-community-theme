@@ -10,7 +10,7 @@ registerHelper('greaterThan', function(arg1, arg2) {
 });
 
 </script>
-
+<script type="text/x-handlebars">
 <div class="link-middle-line" id='{{#if topic.hasExcerpt}}link-middle-line-excerpt{{/if}}' >
       <div class="topic-title">
         {{~raw "topic-status" topic=topic}}
@@ -53,5 +53,6 @@ registerHelper('greaterThan', function(arg1, arg2) {
           <span>{{topic.like_count }} likes <span> | <span> {{topic.reply_count}} comments </span>
         </div>       
       </div>     
+</div>
 </div>
 </div>
