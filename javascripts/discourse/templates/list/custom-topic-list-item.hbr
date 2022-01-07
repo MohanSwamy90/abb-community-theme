@@ -29,7 +29,7 @@
 <div class="posters-length">
   +{{topic.posters.length}}
 </div>
-{{/if}}
+{{/greaterThan}}
 <div>
 </div>
 </div>
