@@ -38,7 +38,7 @@ registerHelper('greaterThan', function(arg1, arg2) {
     <a href="{{poster.user.path}}" data-user-card="{{poster.user.username}}" class="{{poster.extraClasses}}">{{avatar poster avatarTemplatePath="user.avatar_template" usernamePath="user.username" namePath="user.name" imageSize="small"}}</a>
   {{/if}}
 {{/each}}
-{{#if (greaterThan topic.posters.length,1)}}
+{{#if topic.posters.length}}
 <div class="posters-length">
   +{{topic.posters.length}}
 </div>
