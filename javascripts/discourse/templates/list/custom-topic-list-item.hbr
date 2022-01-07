@@ -7,8 +7,8 @@ registerHelper('greaterThan', function(arg1, arg2) {
     } else {
        return false
     }
-})
-</script>
+});
+
 <div class="link-middle-line" id='{{#if topic.hasExcerpt}}link-middle-line-excerpt{{/if}}' >
       <div class="topic-title">
         {{~raw "topic-status" topic=topic}}
@@ -53,3 +53,5 @@ registerHelper('greaterThan', function(arg1, arg2) {
       </div>     
 </div>
 </div>
+
+</script>
