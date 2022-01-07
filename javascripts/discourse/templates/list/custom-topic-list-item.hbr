@@ -1,3 +1,14 @@
+<script type="text/discourse-plugin" version="0.8">
+import { registerHelper } from 'discourse-common/lib/helpers';
+
+registerHelper('greaterThan', function(arg1, arg2) {
+     if (arg1 > arg2) {
+         return true
+    } else {
+       return false
+    }
+})
+</script>
 <div class="link-middle-line" id='{{#if topic.hasExcerpt}}link-middle-line-excerpt{{/if}}' >
       <div class="topic-title">
         {{~raw "topic-status" topic=topic}}
