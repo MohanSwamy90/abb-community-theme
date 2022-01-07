@@ -25,7 +25,7 @@
     <a href="{{poster.user.path}}" data-user-card="{{poster.user.username}}" class="{{poster.extraClasses}}">{{avatar poster avatarTemplatePath="user.avatar_template" usernamePath="user.username" namePath="user.name" imageSize="small"}}</a>
   {{/if}}
 {{/each}}
-{{#if topic.posters.length}}
+{{#greaterThan topic.posters.length 1}}
 <div class="posters-length">
   +{{topic.posters.length}}
 </div>
