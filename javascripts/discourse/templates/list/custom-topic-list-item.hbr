@@ -56,3 +56,4 @@ registerHelper('greaterThan', function(arg1, arg2) {
 </div>
 </div>
 </div>
+</script>
