@@ -399,3 +399,15 @@ display:none;
 .edit-topic {
     font-size: 20px;
 }
+
+#topic-footer-button-share-and-invite,.topic-admin-menu-button .popup-menu-button, #topic-footer-button-bookmark,#topic-footer-button-flag{
+    border: 1px solid #3366FF;
+    border-radius: 4px;
+    opacity: 1;
+    background-color: #F5F5F5;
+    color: #3366FF;
+}
+
+.d-icon-d-topic-share, .popup-menu-button .d-icon-wrench,#topic-footer-button-flag.d-icon-flag{
+    color: #3366FF;
+}
