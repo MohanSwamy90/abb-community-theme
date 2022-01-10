@@ -50,7 +50,7 @@ registerHelper('greaterThan', function(arg1, arg2) {
       <div>     
        <div class="count">
         <div>
-          {{#if topic.like_count}} <span>{{topic.like_count }} likes {{/if}} <span> | {{#if topic.reply_count}} <span> {{topic.reply_count}} comments </span>{{/if}}
+          {{#if topic.like_count}} <span>{{topic.like_count }} likes  </span> | {{/if}} {{#if topic.reply_count}} <span> {{topic.reply_count}} comments </span>{{/if}}
         </div>       
       </div>     
 </div>
