@@ -25,11 +25,11 @@
    <a href="{{poster.user.path}}" data-user-card="{{poster.user.username}}" class="{{poster.extraClasses}}">{{avatar poster avatarTemplatePath="user.avatar_template" usernamePath="user.username" namePath="user.name" imageSize="small"}}</a>
   {{/if}}
 {{/each}}
- {{#greaterThan topic.posters.length}}
+ {{#if topic.posters.length}}
 <div class="posters-length">
   +{{topic.posters.length}}
 </div>
-{{/greaterThan}}
+{{/if}}
 <div>
 </div>
 </div>
