@@ -1,13 +1,14 @@
 <script type="text/discourse-plugin" version="0.8">
 const {registerHelper} = require('discourse-common/lib/helpers');
 
-registerHelper('greaterThan', function(arg1, arg2) {
-     if (arg1 > arg2) {
+registerHelper('greaterThan', function(arg1) {
+     if (arg1 > 1) {
          return true
     } else {
        return false
     }
 });
+
 
 </script>
 
@@ -38,7 +39,7 @@ registerHelper('greaterThan', function(arg1, arg2) {
    <a href="{{poster.user.path}}" data-user-card="{{poster.user.username}}" class="{{poster.extraClasses}}">{{avatar poster avatarTemplatePath="user.avatar_template" usernamePath="user.username" namePath="user.name" imageSize="small"}}</a>
   {{/if}}
 {{/each}}
-{{#if topic.posters.length}}
+ {{#if (greaterThan topic.posters.length)}}
 <div class="posters-length">
   +{{topic.posters.length}}
 </div>
