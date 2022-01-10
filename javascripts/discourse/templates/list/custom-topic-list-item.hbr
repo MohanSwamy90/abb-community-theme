@@ -26,7 +26,7 @@ registerHelper('greaterThan', function(arg1, arg2) {
          {{format-date topic.createdAt }}
       </div>
       {{~raw-plugin-outlet name="topic-list-after-title"}} 
-      <div>      
+      <div class="bottom-line">      
         <div class="topic-excerpt">
             {{raw "list/topic-excerpt" topic=topic}}
              {{topic.excerpt}}
@@ -35,7 +35,7 @@ registerHelper('greaterThan', function(arg1, arg2) {
   {{#if poster.moreCount}}
     <a class="posters-more-count">{{poster.moreCount}}</a>
   {{else}}  
-    <span class="posters-position"><a href="{{poster.user.path}}" data-user-card="{{poster.user.username}}" class="{{poster.extraClasses}}">{{avatar poster avatarTemplatePath="user.avatar_template" usernamePath="user.username" namePath="user.name" imageSize="small"}}</a></span>
+   <a href="{{poster.user.path}}" data-user-card="{{poster.user.username}}" class="{{poster.extraClasses}}">{{avatar poster avatarTemplatePath="user.avatar_template" usernamePath="user.username" namePath="user.name" imageSize="small"}}</a>
   {{/if}}
 {{/each}}
 {{#if topic.posters.length}}
