@@ -9,8 +9,9 @@
     },
   }); 
   
-  $("body").on("click",".cancel",function(){
+   $(document).ready(function() {
     $('.topic-list-item-separator').hide();
+    $('.topic-list-item').removeClass('last-visit');
   });
       
 </script>
