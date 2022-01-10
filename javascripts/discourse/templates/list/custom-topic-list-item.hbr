@@ -34,8 +34,8 @@ registerHelper('greaterThan', function(arg1, arg2) {
       {{#each topic.posters as |poster|}}
   {{#if poster.moreCount}}
     <a class="posters-more-count">{{poster.moreCount}}</a>
-  {{else}}
-    <a href="{{poster.user.path}}" data-user-card="{{poster.user.username}}" class="{{poster.extraClasses}}">{{avatar poster avatarTemplatePath="user.avatar_template" usernamePath="user.username" namePath="user.name" imageSize="small"}}</a>
+  {{else}}  
+    <span class="posters-position"><a href="{{poster.user.path}}" data-user-card="{{poster.user.username}}" class="{{poster.extraClasses}}">{{avatar poster avatarTemplatePath="user.avatar_template" usernamePath="user.username" namePath="user.name" imageSize="small"}}</a></span>
   {{/if}}
 {{/each}}
 {{#if topic.posters.length}}
